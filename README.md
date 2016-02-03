@@ -16,6 +16,7 @@ An opinionated roots template for websites and blogs.
 ### Installation
 
 - `roots tpl add blimp https://github.com/GetBlimp/roots-template-blimp.git`
+- `roots new <project_name> --template blimp`
 
 ### Options
 
