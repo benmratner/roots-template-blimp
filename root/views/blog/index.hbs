@@ -1,0 +1,18 @@
+{{#extend "layout"}}
+  {{#content "title"}}Home Page Title{{/content}}
+
+  {{#content "content"}}
+    <h1>Our Blog</h1>
+    <p>Read our stories</p>
+
+    <ul>
+      {{#each site.posts as |post|}}
+        <li>
+          <a href="{{post._url}}">{{post.title}}</a>
+          <p>{{post.excerpt}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  {{/content}}
+
+{{/extend}}

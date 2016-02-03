@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <title>{{post.title}}</title>
+    {{exec css "/"}}
+  </head>
+  <body>
+    {{> "header"}}
+    <h3>{{post.title}}</h3>
+    {{#if post.showSidebar}}
+      <div class="sidebar">
+        <h4>Sidebar</h4>
+        <ul>
+          {{#each site.blog as |post|}}
+            <li><a href="{{post._url}}">{{post.title}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+    {{{block "content"}}}
+    <script src="/js/bundle.js"></script>
+  </body>
+</html>
